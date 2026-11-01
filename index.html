@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contador de palabras</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="contenedor">
+    <h1>📝 Contador de palabras</h1>
+
+    <section class="estadisticas" aria-live="polite">
+      <div class="dato"><span id="palabras">0</span><small>palabras</small></div>
+      <div class="dato"><span id="caracteres">0</span><small>caracteres</small></div>
+      <div class="dato"><span id="sin-espacios">0</span><small>sin espacios</small></div>
+      <div class="dato"><span id="frases">0</span><small>frases</small></div>
+      <div class="dato"><span id="parrafos">0</span><small>párrafos</small></div>
+      <div class="dato"><span id="lectura">0 min</span><small>de lectura</small></div>
+    </section>
+
+    <textarea id="texto" placeholder="Escribe o pega aquí tu texto..." aria-label="Texto a analizar"></textarea>
+
+    <div class="limite">
+      <label>
+        Límite de caracteres
+        <input type="number" id="limite" min="1" placeholder="Sin límite">
+      </label>
+      <span id="restantes" class="restantes"></span>
+    </div>
+
+    <section class="frecuentes">
+      <h2>Palabras más repetidas</h2>
+      <ol id="top"></ol>
+      <p id="sin-top" class="sin-top">Escribe algo para ver las palabras más repetidas.</p>
+    </section>
+
+    <button id="borrar" class="borrar">Borrar texto</button>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
